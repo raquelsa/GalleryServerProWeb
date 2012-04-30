@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GalleryServerPro.WebControls.BindingErrors">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wwDataBinder\BindingErrors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.BindingError">
+    <Position X="6" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAIAAAAAgAAAAAAAABAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>wwDataBinder\BindingErrors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.wwErrorDisplay">
+    <Position X="8.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACBACAgAAAACgAAAIAQAQEACAAAAAgAICBoECAAIgBA=</HashCode>
+      <FileName>Extended\wwErrorDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.wwDataBinder">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AYGQBQAEAAIIAAIiACABBoAEUAYAQAgQAAQEAaEQACA=</HashCode>
+      <FileName>wwDataBinder\wwDataBinder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BindingErrors" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DataBindingItems" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.wwDataBindingItem">
+    <Position X="3.75" Y="2" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AhEAKAAAJSCwkAsEAAEAAAAgAEAAgAAMgRAMAQAIooQ=</HashCode>
+      <FileName>wwDataBinder\wwDataBindingItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.PopupInfoItemCollection">
+    <Position X="3.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAABCAACAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>PopupInfo\PopupInfoItemCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechInfoSystems.Controls.PopupInfoItem" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgQAAAAAAIAAAgAAIAAAIAYAAAIA=</HashCode>
+      <FileName>PopupInfo\PopupInfoItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.BindingErrorException" Collapsed="true">
+    <Position X="6" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wwDataBinder\BindingExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.ValidationErrorException" Collapsed="true">
+    <Position X="6" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wwDataBinder\BindingExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.RequiredFieldException" Collapsed="true">
+    <Position X="6" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>wwDataBinder\BindingExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServerPro.WebControls.PopupInfo">
+    <Position X="0.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQSQBYAQAAAAACAAAGAAAICOGAAEIAAAIAAAAQAAGAA=</HashCode>
+      <FileName>PopupInfo\PopupInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="GalleryServerPro.WebControls.RenderModes">
+    <Position X="8.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAA=</HashCode>
+      <FileName>Extended\wwErrorDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GalleryServerPro.WebControls.BindingErrorMessageLocations">
+    <Position X="6" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACABAAAEAAAQ=</HashCode>
+      <FileName>wwDataBinder\wwDataBindingItem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

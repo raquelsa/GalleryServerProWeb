@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D3C228D-85F1-4E16-B01B-3A485D1ECF1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServerPro.Data.SqlCe</RootNamespace>
+    <AssemblyName>GalleryServerPro.Data.SqlCe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\Rule Sets\AllRules - GSP Custom.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataUtility.cs" />
+    <Compile Include="Gallery.cs" />
+    <Compile Include="GspContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlCeGalleryServerProProvider.cs" />
+    <Compile Include="SqlCeMembershipProvider.cs" />
+    <Compile Include="SqlCeMembershipUtils.cs" />
+    <Compile Include="SqlCeProfileProvider.cs" />
+    <Compile Include="SqlCeRoleProvider.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SqlUpgrade_2_5_0_to_2_6_0.sqlce" />
+    <EmbeddedResource Include="GalleryServerProSchema.xml" />
+    <EmbeddedResource Include="SqlCeInstallScript.sqlce" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj">
+      <Project>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</Project>
+      <Name>TIS.GSP.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj">
+      <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
+      <Name>TIS.GSP.ErrorHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Provider\TIS.GSP.Provider.csproj">
+      <Project>{5C79A39E-6B63-42F2-B4F6-D69576DF7F5C}</Project>
+      <Name>TIS.GSP.Provider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

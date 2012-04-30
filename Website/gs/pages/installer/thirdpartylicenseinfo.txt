@@ -1,0 +1,82 @@
+﻿Gallery Server Pro uses several libraries to provide additional functionality. Below is a list and relevant licensing information for each one.
+
+SharpZipLib
+ComponentArt
+
+***************************************
+SharpZipLib
+***************************************
+http://www.icsharpcode.net/opensource/sharpziplib/
+GalleryServerPro.ICSharpCode.SharpZipLib.dll
+License: GNU GPL with the following exception:
+
+Linking this library statically or dynamically with other modules is making a combined work based on this library. Thus, the terms and conditions of the GNU General Public License cover the whole combination.
+
+As a special exception, the copyright holders of this library give you permission to link this library with independent modules to produce an executable, regardless of the license terms of these independent modules, and to copy and distribute the resulting executable under terms of your choice, provided that you also meet, for each linked independent module, the terms and conditions of the license of that module. An independent module is a module which is not derived from or based on this library. If you modify this library, you may extend this exception to your version of the library, but you are not obligated to do so. If you do not wish to do so, delete this exception statement from your version. 
+
+***************************************
+ComponentArt
+***************************************
+http://www.componentart.com/
+ComponentArt.Web.UI.dll
+License: Commerical License. See below for full text. Tech Info Systems has purchased a Subscription License for ComponentArt Web.UI for ASP.NET AJAX. As noted below, this license provides redistributions rights.
+
+Please review the following license agreement before installing or using the Web.UI suite, any individual ComponentArt software component or other software product, and/or all related materials. If you agree to the terms herein then you must click the "YES" button during the software installation process as confirmation before you are permitted to use this software and related documents.
+
+Definitions:
+
+This ComponentArt Inc. End-User Software License Agreement ("EULA") is a legal agreement between you (either as an individual user, corporation or single entity) and ComponentArt Inc. ("ComponentArt") for the Web.UI suite or individual software product - which includes computer software, and may include associated media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT" or "SOFTWARE"). By exercising your rights to install the SOFTWARE PRODUCT, you agree to be bound by the terms of this End User License Agreement ("EULA"), including the limitations and warranty disclaimers. If you do NOT agree to the terms of this EULA, you may not install nor use the SOFTWARE PRODUCT; If this is the case, please uninstall the SOFTWARE PRODUCT from your system immediately, and destroy all copies of the SOFTWARE PRODUCT and all of its component parts, source code, associated documentation, and related materials.
+ 
+SOFTWARE PRODUCT LICENSE:
+
+The SOFTWARE PRODUCT is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. 
+
+1. GRANT OF LICENSE.
+
+This is a license agreement, and NOT an agreement for sale. ComponentArt retains ownership of the copy of THE SOFTWARE in your possession, and all copies you may be licensed to make. ComponentArt retains all rights not expressly granted to you in this LICENSE. ComponentArt hereby grants to you, and you accept, a non-exclusive, non-transferable license to use, copy and modify THE SOFTWARE only as authorized below. 
+
+Provided that you have accepted these terms contained herein by clicking the "YES" button at the end of this Agreement, this EULA grants you the following rights: 
+
+Installation and Use: 
+
+DEVELOPER LICENSE: For single-version licenses, you are granted a license as a single developer (individual) to the particular licensed version of the SOFTWARE PRODUCT. For subscription-based licenses, you are granted a license as a single developer (individual) to all versions of the particular product released during the period of the subscription.
+
+For the version(s) you are licensed for, you are granted a license as a single individual to distribute the SOFTWARE PRODUCT royalty-free with an unlimited number of different solutions to an unlimited number of web servers, provided they are developed solely by you.  The term "different solutions" is understood to mean non-identical, non-"shrink-wrapped" applications to be resold or re-licensed by you.  You may not distribute the product with more than 10 copies of an identical or similarly-functioning ("shrink-wrapped") solution or application.  For royalty-free distribution of more than 10 identical or similarly-functioning copies of a solution or application, you must purchase a subscription-level license or higher, and are required to modify the SOFTWARE PRODUCT code as per ComponentArt's instructions.
+
+At no time may the SOFTWARE PRODUCT be used by more than one individual at the same time for development purposes -- nor may the SOFTWARE PRODUCT be distributed for use with applications other than those developed by you.
+
+For subscription-based licenses, you are further licensed as a single individual to distribute the SOFTWARE PRODUCT royalty-free with an unlimited number of solutions or applications to an unlimited number of web servers, provided they are developed solely by you.  This includes royalty-free distribution of multiple copies of identical or similarly-functioning ("shrink-wrapped") solutions or applications.  For royalty-free distribution of more than 10 identical or similarly-functioning copies of a solution or application, you are required to modify the SOFTWARE PRODUCT code as per ComponentArt's instructions to ensure it cannot be re-used for any purpose outside of your distributed application.
+
+For subscription-based licenses, you are also further licensed to view the source code to the SOFTWARE PRODUCT or part thereof, as permitted by the licensor, and modify it for your own needs. You may only re-distribute the source code as part of a compiled solution that adds significant functionality to THE SOFTWARE PRODUCT, and may not redistribute it in non-compiled form.
+
+For Developer and Subscription-based licenses, you are required to reasonably ensure that the SOFTWARE PRODUCT is not reused by or with any application other than those with which you distribute it. For example, if you install the Menu for ASP.NET control along with a packaged application on a customer's server, that customer is not permitted to use the control independent of your application, and must be informed as such.
+
+The royalty-free distribution rights defined above are not applicable to applications developed for Microsoft SharePoint platform. Special server-based licenses must be acquired from ComponentArt for all SharePoint-based applications distributing the software product.
+
+FOR ALL LICENSES: In no case shall you rent, lease, lend, redistribute nor re-license THE SOFTWARE PRODUCT or any related source code to a 3rd party individual or entity, except as outlined above. In no case shall you grant further redistribution rights for THE SOFTWARE PRODUCT to the end-users of your solution.
+
+UNDER NO CIRCUMSTANCES MAY THE SOURCE CODE OR THE COMPILED PRODUCT BE USED AS THE BASIS FOR CREATING A PRODUCT THAT CONTAINS THE SAME, OR SUBSTANTIALLY THE SAME, FUNCTIONALITY AS ANY COMPONENTART INC. PRODUCT.
+
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS. 
+
+Termination: Without prejudice to any other rights, ComponentArt Inc. may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the SOFTWARE PRODUCT and all of its component parts, source code, associated documentation, and related materials. 
+
+3. COPYRIGHT.
+
+All title and copyrights in and to the SOFTWARE PRODUCT (including but not limited to any images, photographs, animations, video, audio, music, text, and "applets" incorporated into the SOFTWARE PRODUCT), the accompanying printed materials, and any copies of the SOFTWARE PRODUCT are owned by ComponentArt Inc. The SOFTWARE PRODUCT is protected by Canadian and U.S. copyright laws and international treaty provisions. Therefore, you must treat the SOFTWARE PRODUCT like any other copyrighted material. 
+
+4. LIMITED WARRANTY.
+
+NO WARRANTIES. ComponentArt Inc. expressly disclaims any warranty for the SOFTWARE PRODUCT. The SOFTWARE PRODUCT and any related documentation is provided "as is" without warranty of any kind, either expressed or implied, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. The entire risk arising out of use or performance of the SOFTWARE PRODUCT remains with you. 
+
+5. LIMITATION OF LIABILITY. 
+
+NO LIABILITY FOR CONSEQUENTIAL DAMAGES. In no event shall ComponentArt Inc. or its distributors be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this ComponentArt Inc. product (THE SOFTWARE PRODUCT) and related materials, even if ComponentArt Inc. has been advised of the possibility of such damages. Because some states do not allow the exclusion or limitation of liability for consequential or incidental damages, the above limitation may not apply to you. 
+
+If you have any questions regarding this End User License Agreement, please write to: 
+
+ComponentArt Inc. 
+511 King Street West, Suite 400 
+Toronto, Ontario M5V 1K4 
+Canada

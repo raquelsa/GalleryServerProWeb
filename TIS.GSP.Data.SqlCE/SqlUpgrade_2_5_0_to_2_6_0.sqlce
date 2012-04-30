@@ -1,0 +1,114 @@
+﻿/*
+SQL CE: This script updates the database schema from 2.5.0 to 2.6.0.
+This script provides the following changes:
+
+1. Adds MIME type for .dv file.
+2. Changes MIME type video/m4v to video/x-m4v.
+3. Updates version #'s on FlowPlayer templates.
+4. Adds browser templates for Safari.
+5. Adds gallery settings MediaEncoderSettings and MediaEncoderTimeoutMs.
+6. Create table gs_MediaQueue.
+7. Update data schema version to 2.6.0
+*/
+
+/* 1. Adds MIME type for .dv file (deleting first just in case it already exists). */
+DELETE FROM [gs_MimeType] WHERE [FileExtension]='.dv';
+GO
+
+INSERT INTO [gs_MimeType] ([FileExtension], [MimeTypeValue], [BrowserMimeTypeValue])
+VALUES ('.dv','video/x-dv','');
+GO
+
+/* 2. Changes MIME type video/m4v to video/x-m4v */
+UPDATE [gs_MimeType]
+SET [MimeTypeValue]='video/x-m4v'
+WHERE [FileExtension]='.m4v';
+GO
+
+UPDATE [gs_BrowserTemplate]
+SET [MimeType]='video/x-m4v'
+WHERE [MimeType]='video/m4v'
+GO
+
+/* 3. Updates version #'s on FlowPlayer templates */
+UPDATE [gs_BrowserTemplate]
+SET 
+ [HtmlTemplate]=REPLACE(CAST([HtmlTemplate] AS nchar(4000)), 'flowplayer-3.2.4.min.js', 'flowplayer-3.2.6.min.js'),
+ [ScriptTemplate]=REPLACE(CAST([ScriptTemplate] AS nchar(4000)), 'flowplayer-3.2.4.min.js', 'flowplayer-3.2.6.min.js')
+GO
+
+UPDATE [gs_BrowserTemplate]
+SET 
+ [HtmlTemplate]=REPLACE(CAST([HtmlTemplate] AS nchar(4000)), 'flowplayer-3.2.5.swf', 'flowplayer-3.2.7.swf'),
+ [ScriptTemplate]=REPLACE(CAST([ScriptTemplate] AS nchar(4000)), 'flowplayer-3.2.5.swf', 'flowplayer-3.2.7.swf')
+GO
+
+/* 4. Adds browser templates for Safari (deleting first just in case they already exist) */
+DELETE FROM [gs_BrowserTemplate] WHERE [MimeType]='video/mp4' AND [BrowserId]='safari';
+GO
+DELETE FROM [gs_BrowserTemplate] WHERE [MimeType]='video/x-m4v' AND [BrowserId]='safari';
+GO
+DELETE FROM [gs_BrowserTemplate] WHERE [MimeType]='video/quicktime' AND [BrowserId]='safari';
+GO
+DELETE FROM [gs_BrowserTemplate] WHERE [MimeType]='audio/x-mp3' AND [BrowserId]='safari';
+GO
+DELETE FROM [gs_BrowserTemplate] WHERE [MimeType]='audio/m4a' AND [BrowserId]='safari';
+GO
+
+INSERT INTO [gs_BrowserTemplate] ([MimeType], [BrowserId], [HtmlTemplate], [ScriptTemplate])
+VALUES ('video/mp4','safari','<video src="{MediaObjectUrl}" controls autobuffer {AutoPlay}><p>Cannot play: Your browser does not support the <code>video</code> element or the codec of this file. Use another browser or download the file by clicking the download toolbar button above (available only when downloading is enabled).</p></video>', '');
+GO
+
+INSERT INTO [gs_BrowserTemplate] ([MimeType], [BrowserId], [HtmlTemplate], [ScriptTemplate])
+VALUES ('video/x-m4v','safari','<video src="{MediaObjectUrl}" controls autobuffer {AutoPlay}><p>Cannot play: Your browser does not support the <code>video</code> element or the codec of this file. Use another browser or download the file by clicking the download toolbar button above (available only when downloading is enabled).</p></video>', '');
+GO
+
+INSERT INTO [gs_BrowserTemplate] ([MimeType], [BrowserId], [HtmlTemplate], [ScriptTemplate])
+VALUES ('video/quicktime','safari','<video src="{MediaObjectUrl}" controls autobuffer {AutoPlay}><p>Cannot play: Your browser does not support the <code>video</code> element or the codec of this file. Use another browser or download the file by clicking the download toolbar button above (available only when downloading is enabled).</p></video>', '');
+GO
+
+INSERT INTO [gs_BrowserTemplate] ([MimeType], [BrowserId], [HtmlTemplate], [ScriptTemplate])
+VALUES ('audio/x-mp3','safari','<audio src="{MediaObjectUrl}" controls autobuffer {AutoPlay}><p>Cannot play: Your browser does not support the <code>audio</code> element or the codec of this file. Use another browser or download the file by clicking the download toolbar button above (available only when downloading is enabled).</p></audio>', '');
+GO
+
+INSERT INTO [gs_BrowserTemplate] ([MimeType], [BrowserId], [HtmlTemplate], [ScriptTemplate])
+VALUES ('audio/m4a','safari','<audio src="{MediaObjectUrl}" controls autobuffer {AutoPlay}><p>Cannot play: Your browser does not support the <code>audio</code> element or the codec of this file. Use another browser or download the file by clicking the download toolbar button above (available only when downloading is enabled).</p></audio>', '');
+GO
+
+/* 5. Adds gallery settings MediaEncoderSettings and MediaEncoderTimeoutMs (deleting first just in case they already exist) */
+DELETE FROM [gs_GallerySetting] WHERE [SettingName]='MediaEncoderSettings';
+GO
+DELETE FROM [gs_GallerySetting] WHERE [SettingName]='MediaEncoderTimeoutMs';
+GO
+
+INSERT INTO [gs_GallerySetting] ([FKGalleryId], [IsTemplate], [SettingName], [SettingValue])
+VALUES (-2147483648,1,'MediaEncoderSettings','.mp3||.mp3||~~.mp4||.mp4||~~.flv||.flv||~~.m4a||.m4a||~~*video||.flv||-i "{SourceFilePath}" -y "{DestinationFilePath}"~~*video||.mp4||-i "{SourceFilePath}" -y -vcodec libx264 -fpre "{BinPath}\libx264-medium.ffpreset" "{DestinationFilePath}"~~*audio||.m4a||-i "{SourceFilePath}" -y "{DestinationFilePath}"');
+GO
+
+INSERT INTO [gs_GallerySetting] ([FKGalleryId], [IsTemplate], [SettingName], [SettingValue])
+VALUES (-2147483648,1,'MediaEncoderTimeoutMs','900000');
+GO
+
+/* 6. Create table gs_MediaQueue */
+CREATE TABLE [gs_MediaQueue] (
+	[MediaQueueId] [int] IDENTITY (1, 1) NOT NULL CONSTRAINT [PK_gs_MediaQueue] PRIMARY KEY, 
+	[FKMediaObjectId] [int] NOT NULL,
+	[Status] [nvarchar](256) NOT NULL,
+	[StatusDetail] [ntext] NOT NULL,
+	[DateAdded] [datetime] NOT NULL,
+	[DateConversionStarted] [datetime] NULL,
+	[DateConversionCompleted] [datetime] NULL
+);
+GO
+
+ALTER TABLE [gs_MediaQueue]
+ADD CONSTRAINT [FK_gs_MediaQueue_gs_MediaObject] FOREIGN KEY([FKMediaObjectId])
+REFERENCES [gs_MediaObject] ([MediaObjectId])
+ON DELETE CASCADE
+GO
+
+/* 7. Update data schema version to 2.6.0 */
+UPDATE [gs_AppSetting]
+SET [SettingValue] = '2.6.0'
+WHERE [SettingName] = 'DataSchemaVersion';
+GO
