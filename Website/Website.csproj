@@ -817,6 +817,10 @@
       <Project>{6D3C228D-85F1-4E16-B01B-3A485D1ECF1C}</Project>
       <Name>TIS.GSP.Data.SqlCe</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Data.SqlServer\TIS.GSP.Data.SqlServer.csproj">
+      <Project>{9D9BA288-5BD8-469B-8807-E82BB9F5E406}</Project>
+      <Name>TIS.GSP.Data.SqlServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TIS.GSP.ErrorHandler\TIS.GSP.ErrorHandler.csproj">
       <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
       <Name>TIS.GSP.ErrorHandler</Name>
